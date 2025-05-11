@@ -73,3 +73,14 @@ def messages_for(web):
         {'role':'system', 'content':system_prompt},
         {'role':'user', 'content':user_prompt_for(web)}
     ]
+
+
+
+def summerizer(url):
+    website = Website(url)
+    response = openai.chat.completions.create(
+        model='gpt-4o-mini',
+        messages=messages_for(website)
+    )
+
+    return response.choices[0].message.content
