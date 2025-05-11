@@ -38,11 +38,8 @@ class Website:
         self.text =  soup.body.get_text(separator="\n", strip=True)
 
 
-web = Website("https://edwarddonner.com")
 
-print(web.title)
 
-print(web.text)
 
 
 system_prompt = "You are an assistant that analyzes the contents of a website\
@@ -84,3 +81,9 @@ def summerizer(url):
     )
 
     return response.choices[0].message.content
+
+
+
+def display_summery(url):
+    summery = summerizer(url)
+    display(Markdown(summery))
