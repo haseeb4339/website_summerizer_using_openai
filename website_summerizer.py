@@ -69,7 +69,7 @@ def user_prompt_for(web):
 
 def messages_for(web):
 
-    return[
-        {'role':'system', 'content':system_prompt}
+    return [
+        {'role':'system', 'content':system_prompt},
         {'role':'user', 'content':user_prompt_for(web)}
     ]
