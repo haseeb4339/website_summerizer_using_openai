@@ -52,7 +52,7 @@ system_prompt = "You are an assistant that analyzes the contents of a website\
 
 
 def user_prompt_for(web):
-    user_prompt = f"You are looking at a website titled {web.title}"
+    user_prompt = f"\nYou are looking at a website titled {web.title}"
     user_prompt += "The contents of this website is as follows:\
         please provide a short summary of this website in markdown.\
         If it include news or announcements, then summarize these too.\n\n"
@@ -60,3 +60,16 @@ def user_prompt_for(web):
     user_prompt +=web.text
     
     return user_prompt
+
+
+# print(user_prompt_for(web))
+
+#### message format for openai is list of dict having role and system/user
+
+
+def messages_for(web):
+
+    return[
+        {'role':'system', 'content':system_prompt}
+        {'role':'user', 'content':user_prompt_for(web)}
+    ]
