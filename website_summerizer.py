@@ -50,3 +50,13 @@ system_prompt = "You are an assistant that analyzes the contents of a website\
     Respond in markdown."
 
 
+
+def user_prompt_for(web):
+    user_prompt = f"You are looking at a website titled {web.title}"
+    user_prompt += "The contents of this website is as follows:\
+        please provide a short summary of this website in markdown.\
+        If it include news or announcements, then summarize these too.\n\n"
+    
+    user_prompt +=web.text
+    
+    return user_prompt
