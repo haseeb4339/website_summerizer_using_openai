@@ -1,0 +1,31 @@
+# 🕸️ Website Summarizer with OpenAI
+
+This Python tool fetches and summarizes the content of any website using OpenAI's language model. It extracts readable content from a URL, strips out irrelevant elements (like scripts and images), and generates a markdown-formatted summary.
+
+---
+
+## ✨ Features
+
+- Retrieves content and title from a given website URL.
+- Cleans up HTML to remove non-informational elements.
+- Uses OpenAI's GPT-4o-mini to generate a concise summary.
+- Outputs summary in Markdown format.
+- Optionally displays the summary within Jupyter Notebooks using `IPython.display`.
+
+---
+
+## 📦 Requirements
+
+Make sure you have the following installed:
+
+- Python 3.8+
+- `requests`
+- `beautifulsoup4`
+- `openai`
+- `python-dotenv`
+- `IPython` (optional for markdown display)
+
+Install all dependencies with:
+
+```bash
+pip install -r requirements.txt
