@@ -84,6 +84,10 @@ def summerizer(url):
 
 
 
-def display_summery(url):
-    summery = summerizer(url)
-    display(Markdown(summery))
+# def display_summery(url):
+#     summery = summerizer(url)
+#     display(Markdown(summery))
+
+
+
+print(summerizer("https://ollama.com/"))
